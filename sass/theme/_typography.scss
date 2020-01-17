@@ -1,0 +1,108 @@
+// Default text styles
+body {
+    @include body-font;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
+
+
+// Text sizes
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    @include heading-font;
+}
+.biggest, .bigger, .big, .normal, .small, .smaller {
+    @include body-font;
+}
+
+h1, .h1, .biggest {
+    font-size: var(--h1-font-size);
+}
+h2, .h2, .bigger {
+    font-size: var(--h2-font-size);
+}
+h3, .h3, .big {
+    font-size: var(--h3-font-size);
+}
+h4, .h4, .normal {
+    font-size: var(--normal-font-size);
+}
+h5, .h5, .small {
+    font-size: var(--small-font-size);
+}
+h6, .h6, .smaller {
+    font-size: var(--smaller-font-size);
+}
+
+
+// Font Family
+.body-font { 
+    font-family: var(--text-font) 
+}
+.heading-font { 
+    font-family: var(--title-font) 
+}
+
+
+// Aligment
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+
+
+// Font Style
+.font-bold {
+    font-weight: 700;
+}
+.font-italic {
+    font-style: italic;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-vertical {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+
+// Blockquote
+blockquote {
+    @include body-font;
+    font-size: var(--normal-font-size);
+    font-style: italic;
+    padding: 1.3rem 1rem 1.3rem 2.6rem;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    border-left: 8px solid var(--light-color);
+    background: #efefef;
+
+    &::before {
+        content: "\201C";
+        font-family: Arial;
+        color: var(--light-color);
+        font-size: 4.5rem;
+        position: absolute;
+        left: 0.3rem;
+        top: -1rem;
+    }
+}
+
+.cite {
+    padding: .4rem 1rem;
+    border-left: .25rem solid;
+    background: #efefef;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

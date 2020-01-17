@@ -1,0 +1,85 @@
+.tabs {
+    @include tabs($first-color);
+
+    margin-bottom: var(--gutter);
+
+    .tab-list {
+        display: flex;
+
+        .tab {
+            color: #FFF;
+            font-weight: 700;
+            border-right: 1px solid rgba(#fff, .2);
+            padding: .5em 1.5em;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+    }
+
+    .panel {
+        padding: var(--gutter);
+        box-shadow: var(--shadow);
+        animation: opac 0.8s;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &.vertical-tabs {
+        display: flex;
+
+        .tab-list {
+            flex-direction: column;
+
+            .tab {
+                flex: 1;
+                border-bottom: 1px solid rgba(#fff, .2);
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .tab-content {
+            display: flex;
+        }
+    }
+
+    &.second-color {
+        @include tabs($second-color)
+    }
+    
+    &.third-color {
+        @include tabs($third-color)
+    }
+    
+    &.success-color {
+        @include tabs($success-color)
+    }
+    
+    &.danger-color {
+        @include tabs($danger-color)
+    }
+    
+    &.warning-color {
+        @include tabs($warning-color)
+    }
+    
+    &.info-color {
+        @include tabs($info-color)
+    }
+    
+    &.dark-color {
+        @include tabs($dark-color)
+    }
+}
+
+@keyframes opac {
+    from {
+        opacity:0
+    } 
+    to {
+        opacity:1
+    }
+}

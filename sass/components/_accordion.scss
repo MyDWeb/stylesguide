@@ -1,0 +1,61 @@
+.accordion {
+    @include accordion($first-color);
+
+    .accordion-link {
+        color: #FFF;
+        border-bottom: 1px solid #FFF;
+        font-weight: 700;
+        padding: .5em 1.5em;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+            transition: transform .3s;
+        }
+
+        &.active i {
+            transform: rotate(90deg);
+        }
+
+        &.active + .collapse {
+            display: block;
+        }
+    }
+
+    .collapse {
+        padding: var(--gutter);
+        box-shadow: var(--shadow);
+        animation: opac 0.8s;
+        display: none;
+    }
+
+    &.second-color {
+        @include accordion($second-color)
+    }
+    
+    &.third-color {
+        @include accordion($third-color)
+    }
+    
+    &.success-color {
+        @include accordion($success-color)
+    }
+    
+    &.danger-color {
+        @include accordion($danger-color)
+    }
+    
+    &.warning-color {
+        @include accordion($warning-color)
+    }
+    
+    &.info-color {
+        @include accordion($info-color)
+    }
+    
+    &.dark-color {
+        @include accordion($dark-color)
+    }
+}

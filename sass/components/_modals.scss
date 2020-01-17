@@ -1,0 +1,36 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-modal);
+    background: var(--modal-bg);
+
+    &.active {
+        display: flex;
+    }
+
+    .content {
+        box-shadow: var(--shadow);
+        background: #fff;
+        width: 90%;
+        max-width: 1000px;
+        max-height: 90vh;
+        margin: auto;
+        padding: 2rem;
+        overflow-y: auto;
+    }
+
+    &::before {
+        content: "\F00D";
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        color: var(--danger-color);
+        position: absolute;
+        right: var(--gutter);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}

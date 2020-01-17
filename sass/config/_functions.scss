@@ -1,0 +1,18 @@
+// Convierte de pixeles a REM
+@function rem($px) {
+    @return ($px / 16px) * 1rem;
+}
+
+// Comprueba si es un breakpoints definido para el responsive
+@function isBreakpoint($bp) {
+    @if map-get($breakpoints, $bp) {
+        @return true
+    } @else {
+        @return false
+    }
+};
+
+// Obtiene la medida del punto de ruptura para responisve
+@function getBp($bp) {
+    @return map-get($breakpoints, $bp)
+}

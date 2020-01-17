@@ -1,0 +1,21 @@
+.header {
+    background: #fffffff0;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed)
+}
+
+.icon-header {
+    font-size: 23px;
+
+    .icon {
+        margin-left: 5px;
+    }
+}

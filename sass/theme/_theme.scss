@@ -1,0 +1,70 @@
+// Color, background or border
+.color {
+    color: var(--color)
+}
+.background {
+    background-color: var(--color);
+}
+.border {
+    border-color: var(--color);
+}
+
+// Combinations of colors
+.first-color {
+    --color: var(--first-color);
+}
+.second-color {
+    --color: var(--second-color);
+}
+.third-color {
+    --color: var(--third-color);
+}
+.success-color {
+    --color: var(--success-color);
+}
+.danger-color {
+    --color: var(--danger-color);
+}
+.warning-color {
+    --color: var(--warning-color);
+}
+.info-color {
+    --color: var(--info-color);
+}
+.light-color {
+    --color: var(--light-color);
+}
+.dark-color {
+    --color: var(--dark-color);
+}
+.white-color {
+    --color: var(--white-color);
+}
+.transparent-color {
+    --color: var(--transparent-color);
+}
+.text-color {
+    --color: var(--text-color);
+}
+.border-color {
+    --color: var(--border-color);
+}
+.body-bg {
+    --color: var(--body-bg);
+}
+
+// Border
+.bordered {
+    border: 1px solid var(--border-color);
+}
+.radius {
+    border-radius: var(--border-radius);
+}
+.radius-top {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+.radius-bottom {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}

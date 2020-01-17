@@ -1,0 +1,117 @@
+// Main
+.main-menu {
+    font-size: var(--small-font-size);
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @include from(xl) {
+            display: flex;
+        }
+    }
+
+    li {
+        color: var(--text-color);
+        overflow: hidden;
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    a {
+        color: inherit;
+        font-weight: 600;
+        padding: var(--gutter) calc(var(--gutter) * 2);
+        display: inline-block;
+        transition: .3s;
+        text-decoration: none;
+
+        &:hover, &.active {
+            background: var(--first-color);
+            color: #fff;
+            @include from(xl) {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    @include to(xl) {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        bottom: 0;
+        left: 100vw;
+        z-index: var(--z-modal);
+        justify-content: flex-end;
+        background: var(--modal-bg);
+        display: flex;
+
+        &.show {
+            left: 0;
+
+            ul {
+                width: 400px;
+            }
+        }
+
+        ul {
+            width: 0;
+            max-width: 100%;
+            background: #fffffff0;
+            max-height: 100%;
+            overflow-y: auto;
+            transition: all .3s;
+        }
+
+        li {
+            background: var(--dark-color);
+            color: #fff;
+            border-bottom: 2px solid #fff;
+
+            &:nth-last-child(1) {
+                border-bottom: 0;
+            }
+        }
+
+        a {
+            display: block;
+        }
+    }
+}
+
+// Vertical
+.vertical-menu {
+    font-size: var(--small-font-size);
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: 0 0 .8em 0;
+        font-size: var(--small-font-size);
+        color: var(--text-color);
+
+        &:before {
+            display: none;
+        }
+    }
+
+    a {
+        color: inherit;
+        display: inline-block;
+
+        &.active {
+            font-weight: bold;
+            color: var(--first-color);
+            text-decoration: none;
+            cursor: initial;
+        }
+    }
+}

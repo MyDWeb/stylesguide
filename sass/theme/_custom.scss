@@ -1,0 +1,78 @@
+.logo {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.mustra-color {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: var(--gutter);
+    right: var(--gutter);
+    background: var(--success-color);
+    display: none;
+    z-index: var(--z-fixed);
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: var(--shadow);
+    transition: all .5s;
+
+    &:hover {
+        color: var(--success-color);
+        background: #fff;
+        border: 2px solid var(--success-color);
+
+        i {
+            animation: bounceVertical infinite .3s
+        }
+    }
+}
+
+@keyframes bounceVertical {
+    0% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(2px);
+    }
+}
+
+.section {
+    background: #fff;
+    padding: var(--gutter);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.shadow {
+    box-shadow: var(--shadow);
+}
+
+// Home
+.cursos-container .datos {
+    border-top: 0;
+}
+
+.cursos-container .profesor img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.cursos-container .precio {
+    color: #fff;
+    padding: 3px 6px;
+}

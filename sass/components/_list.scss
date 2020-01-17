@@ -1,0 +1,82 @@
+ul {
+    --color: var(--text-color);
+    list-style: none;
+    padding-left: var(--gutter);
+
+    &.unstyled li:before {
+        display: none;
+    }
+
+    &.circle li:before {
+        border: 1px solid var(--color);
+        background: none;
+    }
+
+    &.square li:before {
+        border-radius: 0;
+    }
+
+    &.diamond li:before {
+        transform: rotate(45deg);
+        border-radius: 0;
+    }
+
+    &.feature li, &.delete  li {
+        padding-left: 1.2em;
+
+        &:before {
+            font-family: 'Font Awesome 5 Free';
+            top: 0;
+            background: none;
+            color: var(--color);
+        }
+    }
+
+    &.feature li:before {
+        content: '\f058';
+    }
+
+    &.delete li:before {
+        content: '\f057';
+    }
+
+    li {
+        position: relative;
+        padding-left: .75em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: .6em;
+            background-color: var(--color);
+            width: .4em;
+            height: .4em;
+            border-radius: .4em;
+        }
+    }
+
+    ul {
+        --color: inherit;
+    }
+}
+
+ol {
+    --color: var(--text-color);
+    list-style: none;
+    padding-left: var(--gutter);
+    counter-reset: list;
+
+    li {
+        counter-increment: list;
+        
+        &:before {
+            content: counters(list, '.') '. ';
+            color: var(--color);
+        }
+    }
+
+    ol {
+        --color: inherit;
+    }
+}

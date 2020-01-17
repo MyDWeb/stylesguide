@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    li:before {
+        display: none;
+    }
+
+    .page-item + .page-item {
+        padding-left: 2px;
+    }
+
+    .page-item .page-link {
+        width: 35px;
+        height: 40px;
+        text-align: center;
+        padding: 10px 0;
+        background-color: #e9ecef;
+        color: #495057;
+        display: block;
+        text-decoration: none;
+    }
+
+    .disabled .page-link {
+        background-color: transparent;
+    }
+
+    .active .page-link, 
+    .active .page-link:hover, 
+    .active .page-link:focus,
+    .page-item:not(.disabled) .page-link:hover, 
+    .page-item:not(.disabled) .page-link:focus {
+        background-color: var(--first-color);
+        color: #fff;
+    }
+}

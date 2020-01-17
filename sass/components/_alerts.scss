@@ -1,0 +1,19 @@
+// Alert
+.alert {
+    padding: .75rem 1.25rem;
+}
+.alert:not(:last-child) {
+    margin-bottom: var(--gutter);
+}
+.alert-success {
+    @include alert($success-color)
+}
+.alert-danger {
+    @include alert($danger-color)
+}
+.alert-warning {
+    @include alert($warning-color)
+}
+.alert-info {
+    @include alert($info-color)
+}

@@ -1,0 +1,25 @@
+.btn {
+    @include button;
+
+    &.ghost {
+        @include button-ghost;
+    }
+
+    &.btn-big {
+        padding: 1rem 1.5rem;
+    }
+
+    &.btn-small {
+        padding: .3rem .8rem;
+    }
+
+    &.btn-full {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    &.rounded {
+        border-radius: 50px;
+    }
+}

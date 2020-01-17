@@ -1,0 +1,87 @@
+// Variables generales
+:root {
+    --max-width: 1600px;
+    --gutter: 1rem;
+    --header-height: 0px;
+    --border-radius: 0.25rem;
+    --min-grid: 400px;
+    --columns-grid: 1fr;
+}
+
+
+// Colores
+$first-color: #007bdf;
+$second-color: #00cbff;
+$third-color: #ff3c32;
+$success-color: #00c600;
+$danger-color: #ff0019;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+$border-color: #dfe2e2;
+$dark-color: #343a40;
+
+:root {
+    --first-color: #007bdf;
+    --second-color: #00cbff;
+    --third-color: #ff3c32;
+
+    --success-color: #00c600;
+    --danger-color: #ff0019;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+
+    --light-color: #c4c4c4;
+    --dark-color: #343a40;
+    --white-color: #ffffff;
+    --transparent-color: transparent;
+
+    --text-color: #53575A;
+    --body-bg: #ffffff;
+    --border-color: #dfe2e2;
+    --modal-bg: #000000b5;
+}
+
+
+// Tipografia
+:root {
+    --text-font: 'Roboto', sans-serif;
+    --title-font: 'Spicy Rice', cursive;
+}
+
+
+// Tamaños de fuentes
+:root {
+    --h1-font-size: #{rem(36px)};
+    --h2-font-size: #{rem(30px)};
+    --h3-font-size: #{rem(24px)};
+    --normal-font-size: #{rem(16px)};
+    --small-font-size: #{rem(14px)};
+    --smaller-font-size: #{rem(12px)};
+
+    --title-line-height: 1.3;
+    --text-line-height: 1.6;
+
+    @include to(lg) {
+        --h1-font-size      : #{rem(26px)};
+        --h2-font-size      : #{rem(22px)};
+        --h3-font-size      : #{rem(18px)};
+        --normal-font-size  : #{rem(15px)};
+        --small-font-size   : #{rem(13px)};
+        --smaller-font-size : #{rem(11px)};
+    }
+}
+
+
+// Z-index
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+// shadow
+:root {
+    --shadow: 0 2px 16px -2px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,38 @@
+// Config
+@import "config/config";
+@import "config/functions";
+@import "config/mixins";
+@import "config/variables";
+
+// Base and elements (generic)
+@import "base/base";
+
+// LAYOUT
+@import "layout/layout";
+
+// Libraries
+@import "libraries/prism";
+
+// MODULOS (SMACSS) O COMPONENTES (ITCSS)
+@import "components/header";
+@import "components/banner";
+@import "components/footer";
+@import "components/accordion";
+@import "components/alerts";
+@import "components/buttons";
+@import "components/forms";
+@import "components/list";
+@import "components/menus";
+@import "components/modals";
+@import "components/spaces";
+@import "components/tables";
+@import "components/tabs";
+@import "components/paginate";
+
+// Theme (colors and fonts)
+@import "theme/typography";
+@import "theme/theme";
+@import "theme/custom";
+
+// Utilities (hacks)
+@import "hacks/hacks";

@@ -1,0 +1,58 @@
+.table-container {
+    overflow-x: auto;
+    min-width: 100%;
+    margin-bottom: var(--gutter);
+}
+
+table {
+    @include tableStyle($first-color);
+    border-collapse: collapse;
+    background: #FFF;
+    min-width: 100%;
+
+    th {
+        color: #FFF;
+        font-weight: 700;
+        border-right: 1px solid rgba(#fff, .2);
+    }
+
+    td {
+        min-width: 100px;
+
+        &:nth-child(even) {
+            background: rgba($border-color, .2);
+        }
+    }
+
+    td, th {
+        padding: 1em 1.5em;
+    }
+
+    &.second-color {
+        @include tableStyle($second-color)
+    }
+    
+    &.third-color {
+        @include tableStyle($third-color)
+    }
+    
+    &.success-color {
+        @include tableStyle($success-color)
+    }
+    
+    &.danger-color {
+        @include tableStyle($danger-color)
+    }
+    
+    &.warning-color {
+        @include tableStyle($warning-color)
+    }
+    
+    &.info-color {
+        @include tableStyle($info-color)
+    }
+    
+    &.dark-color {
+        @include tableStyle($dark-color)
+    }
+}

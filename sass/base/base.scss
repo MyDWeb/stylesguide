@@ -1,0 +1,59 @@
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--body-bg);
+    width: 100%;
+    min-height: 100vh;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+p, blockquote {
+    margin-top: 0;
+    margin-bottom: var(--gutter);
+}
+
+p:last-child, blockquote:last-child {
+    margin-bottom: 0;
+}
+
+p:empty {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--second-color);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+hr {
+    height: 1px;
+    color: var(--border-color);
+    background-color: var(--border-color);
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+:not(pre) code {
+    // background: var(--body-bg);
+    color: var(--third-color);
+    padding: .1rem .3rem;
+    word-break: break-all;
+}

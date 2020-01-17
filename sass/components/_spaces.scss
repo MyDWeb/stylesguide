@@ -1,0 +1,107 @@
+// Margin Styles
+@each $size, $length in $spacers {
+    .m-#{$size} { 
+        margin: $length;
+    }
+    @include media-to(m-#{$size}) {
+        margin: $length;
+    }
+
+    .mt-#{$size},
+    .my-#{$size} {
+        margin-top: $length;
+    }
+    @include media-to(mt-#{$size}) {
+        margin-top: $length;
+    }
+    @include media-to(my-#{$size}) {
+        margin-top: $length;
+    }
+
+    .mr-#{$size},
+    .mx-#{$size} {
+        margin-right: $length;
+    }
+    @include media-to(mr-#{$size}) {
+        margin-right: $length;
+    }
+    @include media-to(mx-#{$size}) {
+        margin-right: $length;
+    }
+
+    .mb-#{$size},
+    .my-#{$size} {
+        margin-bottom: $length;
+    }
+    @include media-to(mb-#{$size}) {
+        margin-bottom: $length;
+    }
+    @include media-to(my-#{$size}) {
+        margin-bottom: $length;
+    }
+
+    .ml-#{$size},
+    .mx-#{$size} {
+        margin-left: $length;
+    }
+    @include media-to(ml-#{$size}) {
+        margin-left: $length;
+    }
+    @include media-to(mx-#{$size}) {
+        margin-left: $length;
+    }
+}
+
+// Padding Styles
+@each $size, $length in $spacers {
+    .p-#{$size} { 
+        margin: $length;
+    }
+    @include media-to(p-#{$size}) {
+        margin: $length;
+    }
+
+    .pt-#{$size},
+    .py-#{$size} {
+        margin-top: $length;
+    }
+    @include media-to(pt-#{$size}) {
+        margin-top: $length;
+    }
+    @include media-to(py-#{$size}) {
+        margin-top: $length;
+    }
+
+    .pr-#{$size},
+    .px-#{$size} {
+        margin-right: $length;
+    }
+    @include media-to(pr-#{$size}) {
+        margin-right: $length;
+    }
+    @include media-to(px-#{$size}) {
+        margin-right: $length;
+    }
+
+    .pb-#{$size},
+    .py-#{$size} {
+        margin-bottom: $length;
+    }
+    @include media-to(pb-#{$size}) {
+        margin-bottom: $length;
+    }
+    @include media-to(py-#{$size}) {
+        margin-bottom: $length;
+    }
+
+    .pl-#{$size},
+    .px-#{$size} {
+        margin-left: $length;
+    }
+    @include media-to(pl-#{$size}) {
+        margin-left: $length;
+    }
+    @include media-to(px-#{$size}) {
+        margin-left: $length;
+    }
+}
