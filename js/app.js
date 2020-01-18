@@ -11,6 +11,7 @@ let gutter = parseFloat(rootStyles.getPropertyValue('--gutter').split('rem')[0])
 let topHeight = header.offsetHeight + (gutter * 16)
 let autoGrid = document.querySelectorAll(".grid-container.auto-columns")
 let iconToggle = document.querySelectorAll(".icon-toggle")
+let animates = document.querySelectorAll(".animate")
 
 // Botón subir arriba
 btnTop.addEventListener('click', function (e) {
@@ -161,6 +162,21 @@ for (let i = 0; i < iconToggle.length; i++) {
     });
 }
 
+// Animate
+function animate() {
+    let scrollTop = document.documentElement.scrollTop
+    let hwindow = window.innerHeight
+
+    for (let i = 0; i < animates.length; i++) {
+        let helement = animates[i].offsetTop
+
+        if((helement - (hwindow - 200)) < scrollTop) {
+            animates[i].style.opacity = 1
+            animates[i].classList.add('animated')
+        }
+    }
+}
+
 
 (function () {
     alertIcons()
@@ -172,6 +188,7 @@ for (let i = 0; i < iconToggle.length; i++) {
     };
     window.onscroll = function (event) {
         activeLink()
+        animate()
         if (document.documentElement.scrollTop > 20) {
             btnTop.style.display = "block";
         } else {
