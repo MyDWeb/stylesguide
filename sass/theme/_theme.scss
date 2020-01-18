@@ -68,3 +68,17 @@
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
+
+// Section
+.section {
+    background: #fff;
+    padding: var(--gutter);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+// Shadow
+.shadow {
+    box-shadow: var(--shadow);
+}

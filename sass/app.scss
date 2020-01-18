@@ -7,9 +7,6 @@
 // Base and elements (generic)
 @import "base/base";
 
-// LAYOUT
-@import "layout/layout";
-
 // Libraries
 @import "libraries/prism";
 
@@ -28,6 +25,10 @@
 @import "components/tables";
 @import "components/tabs";
 @import "components/paginate";
+@import "components/tooltip";
+
+// LAYOUT
+@import "layout/layout";
 
 // Theme (colors and fonts)
 @import "theme/typography";

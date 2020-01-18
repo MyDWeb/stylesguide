@@ -36,11 +36,8 @@
         .left-sidebar {
             grid-area: left;
             border-right: 1px solid var(--border-color);
-
-            @include to(xl) {
-                display: none;
-            }
         }
+
         .content {
             grid-area: content;
         }
@@ -48,12 +45,22 @@
         .right-sidebar {
             grid-area: right;
             border-left: 1px solid var(--border-color);
+        }
 
+        .left-sidebar, .right-sidebar {
             @include to(xl) {
-                display: none;
+                width: 0;
+                height: 0;
+                position: fixed;
+                z-index: var(--z-modal);
+
+                .btn[class*=fixed] {
+                    z-index: calc(var(--z-modal) + 1);
+                }
             }
         }
     }
+
     .footer {
         grid-area: footer;
         margin-top: auto;
@@ -249,13 +256,15 @@
 }
 
 // Position
-.sticky {
-    position: sticky;
-    top: calc(var(--gutter) + var(--header-height));
+@include from(xl) {
+    .sticky {
+        position: sticky;
+        top: calc(var(--gutter) + var(--header-height));
 
-    &.max {
-        max-height: calc(100vh - (var(--gutter) + var(--header-height)));
-        overflow-y: auto;
+        &.max {
+            max-height: calc(100vh - (var(--gutter) + var(--header-height)));
+            overflow-y: auto;
+        }
     }
 }
 .relative {
